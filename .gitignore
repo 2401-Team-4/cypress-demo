@@ -3,3 +3,4 @@ test*
 notes.md
 .env
 deleted/
+cypress/videos/

@@ -21,8 +21,8 @@ const AddQuoteForm = ({ addQuote }) => {
 
   return (
     <>
-      <form onSubmit={createQuote}>
-        <Input value={title} name='title' handler={setTitle}/>
+      <form className='add-quote' onSubmit={createQuote}>
+        <Input value={title}  name='title' handler={setTitle}/>
         <Input value={author} name='author' handler={setAuthor}/>
         <button className='add-quote' type="submit">Add new quote</button>
       </form>
@@ -35,6 +35,7 @@ const Input = ({ value, name, handler }) => {
 
   return (
     <input
+      className={`quote-${name}`}
       value={value}
       name={name}
       placeholder={placeholder}
